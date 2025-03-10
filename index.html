@@ -285,37 +285,6 @@
     <script src="js/swiper.min.js"></script>
     <script src="js/main.js"></script>
 
-    <script>
-        // Email encryption to prevent spam
-        function decryptEmail() {
-            var encoded = "vasb@fxljbex.va"; // ROT13 encoded email
-            var decoded = "";
-            for (var i = 0; i < encoded.length; i++) {
-                var c = encoded.charCodeAt(i);
-                if (c >= 97 && c <= 122) { // a-z
-                    decoded += String.fromCharCode((c - 97 + 13) % 26 + 97);
-                } else if (c >= 65 && c <= 90) { // A-Z
-                    decoded += String.fromCharCode((c - 65 + 13) % 26 + 65);
-                } else {
-                    decoded += encoded.charAt(i);
-                }
-            }
-            window.location.href = "mailto:" + decoded;
-        }
-
-        // Phone encryption to prevent spam
-        function decryptPhone() {
-            var encoded = "+91 9029208698".split('').map(function (c) {
-                if (c >= '0' && c <= '9') {
-                    return String.fromCharCode(((c.charCodeAt(0) - 48 + 5) % 10) + 48);
-                }
-                return c;
-            }).join('');
-            var decoded = "+91 9029208698";
-            window.location.href = "tel:" + decoded.replace(/\s/g, '');
-        }
-    </script>
-
     <!-- Mobile Call Button -->
     <a  href="#" id="phoneLink" onclick="decryptPhone(); return false;" class="mobile-call-button d-md-none">
         <i class="la la-phone"></i>

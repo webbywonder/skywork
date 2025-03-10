@@ -237,6 +237,10 @@ img {
   background: #fff;
 }
 
+.phone-link {
+  margin-top: 10px;
+}
+
 /* ------------------------------
   intro
 ---------------------------------*/
@@ -427,6 +431,34 @@ footer .cp {
     display: none;
   }
 
+  /* Add mobile call button that appears fixed at bottom */
+  .mobile-call-button {
+    display: block;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 99;
+    background: #f2c02f;
+    color: #0a0a0a;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    transition: all 0.3s ease;
+  }
+
+  .mobile-call-button i {
+    font-size: 24px;
+    line-height: 60px;
+  }
+
+  .mobile-call-button:hover {
+    background: #101010;
+    color: #ffffff;
+    transform: scale(1.05);
+  }
+
   .about {
     padding-left: 17%;
     padding-right: 17%;
@@ -481,8 +513,13 @@ footer .cp {
   }
 
   h1 {
-    line-height: 59px;
-    font-size: 55px;
+    line-height: 50px;
+    font-size: 41px;
+  }
+
+  h2 {
+    font-size: 38px;
+    line-height: 48px;
   }
 
   .about {
@@ -505,5 +542,13 @@ footer .cp {
 
   .space-button {
     margin-bottom: 40px;
+  }
+}
+
+@media (max-width: 991.98px) {
+  #navbar {
+      border-bottom: 1px solid #e5e5e5;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+      background: #fff;
   }
 }

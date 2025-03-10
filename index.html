@@ -53,8 +53,7 @@
             </div>
 
             <ul class="button-navbar">
-
-                <li><a href="tel:+919029208698" target="_blank" class="button"><i class="la la-phone"></i> Call Us Now</a></li>
+                <li><a href="#" id="phoneLink" onclick="decryptPhone(); return false;" class="button"><i class="la la-phone"></i> Call Us Now</a></li>
             </ul>
         </div>
     </div>
@@ -104,7 +103,7 @@
                     <img src="img/desk.jpg" alt="SkyWork Coworking Space">
                     <h3>Contact Us Now</h3>
                     <div class="space-button">
-                        <a href="tel:+919029208698" target="_blank" class="button">Call Us Now</a>
+                        <a href="#" id="phoneLink" onclick="decryptPhone(); return false;" class="button">Call Us Now</a>
                     </div>
                 </div>
                 <div class="col-md col-sm-6">
@@ -116,7 +115,7 @@
                     <div class="content">
                         <img src="img/monthly.jpg" alt="Monthly Membership">
                         <h5>Monthly Membership</h5>
-                        <p>₹5,000/Month</p>
+                        <p><strike>₹5,000</strike> ₹4,500/Month</p>
                     </div>
                 </div>
                 <div class="col-md col-sm-6">
@@ -128,7 +127,7 @@
                     <div class="content">
                         <img src="img/cabin.jpg" alt="Private Cabin">
                         <h5>Private Cabin (2-Seater)</h5>
-                        <p>₹8,000/Month</p>
+                        <p><strike>₹10,000</strike> ₹8,000/Month</p>
                     </div>
                 </div>
             </div>
@@ -181,7 +180,7 @@
     <div id="features" class="features">
         <div class="container">
             <div class="row align-items-center">
-                <div class="col-md-5">
+                <div class="col-md-5 mb-4 mb-md-0">
                     <div class="content-left">
                         <h2>Amenities You'll Enjoy</h2>
                         <p>At SkyWork Borivali, we provide all the essentials for a productive workday. Our carefully curated amenities are designed to enhance your work experience while maintaining an affordable price point for professionals at every stage.</p>
@@ -189,7 +188,7 @@
                 </div>
                 <div class="col-md">
                     <div class="content-right">
-                        <div class="row gx-5">
+                        <div class="row row-cols-1 row-cols-sm-2 g-4">
                             <div class="col">
                                 <div class="content content1">
                                     <i class="la la-network-wired"></i>
@@ -204,8 +203,6 @@
                                     <p>Work comfortably with our premium ergonomic chairs designed for all-day productivity.</p>
                                 </div>
                             </div>
-                        </div>
-                        <div class="row gx-5">
                             <div class="col">
                                 <div class="content content3">
                                     <i class="la la-video"></i>
@@ -253,22 +250,10 @@
                             <div class="text">
                                 <h5>Working Hours</h5>
                                 <span>Monday to Saturday: 9 AM - 9 PM</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col">
-                            <div class="icon"><i class="la la-envelope"></i></div>
-                            <div class="text">
-                                <h5>Email</h5>
-                                <span>info@skywork.in</span>
-                            </div>
-                        </div>
-                        <div class="col">
-                            <div class="icon"><i class="la la-phone"></i></div>
-                            <div class="text">
-                                <h5>Phone</h5>
-                                <span>+91 9029208698</span>
+                                <span>Sunday: Closed</span>
+                                <div class="phone-link">
+                                    <a href="#" id="phoneLink" onclick="decryptPhone(); return false;"><i class="la la-phone"></i> <span>Call Us Now</span></a>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -300,7 +285,41 @@
     <script src="js/swiper.min.js"></script>
     <script src="js/main.js"></script>
 
+    <script>
+        // Email encryption to prevent spam
+        function decryptEmail() {
+            var encoded = "vasb@fxljbex.va"; // ROT13 encoded email
+            var decoded = "";
+            for (var i = 0; i < encoded.length; i++) {
+                var c = encoded.charCodeAt(i);
+                if (c >= 97 && c <= 122) { // a-z
+                    decoded += String.fromCharCode((c - 97 + 13) % 26 + 97);
+                } else if (c >= 65 && c <= 90) { // A-Z
+                    decoded += String.fromCharCode((c - 65 + 13) % 26 + 65);
+                } else {
+                    decoded += encoded.charAt(i);
+                }
+            }
+            window.location.href = "mailto:" + decoded;
+        }
 
+        // Phone encryption to prevent spam
+        function decryptPhone() {
+            var encoded = "+91 9029208698".split('').map(function (c) {
+                if (c >= '0' && c <= '9') {
+                    return String.fromCharCode(((c.charCodeAt(0) - 48 + 5) % 10) + 48);
+                }
+                return c;
+            }).join('');
+            var decoded = "+91 9029208698";
+            window.location.href = "tel:" + decoded.replace(/\s/g, '');
+        }
+    </script>
+
+    <!-- Mobile Call Button -->
+    <a  href="#" id="phoneLink" onclick="decryptPhone(); return false;" class="mobile-call-button d-md-none">
+        <i class="la la-phone"></i>
+    </a>
 </body>
 
 </html>

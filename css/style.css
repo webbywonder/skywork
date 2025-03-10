@@ -2,6 +2,7 @@
   Import Google Web Font
 ---------------------------------*/
 @import url("https://fonts.googleapis.com/css2?family=Heebo:wght@100;200;300;400;500;600;700;800;900&amp;family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap");
+
 /* ------------------------------
   General
 ---------------------------------*/
@@ -80,6 +81,7 @@ ul {
   padding: 0;
   margin: 0;
 }
+
 ul li {
   list-style: none;
 }
@@ -163,55 +165,68 @@ img {
   z-index: 99;
   text-align: center;
 }
+
 .navbar .navbar-brand {
   text-align: left;
   width: 18%;
 }
+
 .navbar .navbar-brand img {
   height: 45px;
   width: auto;
   position: relative;
   top: -4px;
 }
+
 .navbar .navbar-brand:hover {
   color: #0a0a0a;
 }
+
 .navbar .navbar-toggler {
   padding: 0;
 }
+
 .navbar .navbar-toggler i {
   font-size: 32px;
 }
+
 .navbar .navbar-toggler:focus {
   box-shadow: none;
 }
+
 .navbar .navbar-collapse {
   position: relative;
   width: 60%;
   text-align: center;
   left: -10px;
 }
+
 .navbar .navbar-nav li {
   padding: 0 10px;
 }
+
 .navbar .navbar-nav li a {
   color: #0a0a0a;
   font-weight: 500;
 }
+
 .navbar .navbar-nav li a:hover {
   color: #f2c02f;
 }
+
 .navbar .navbar-nav li .button {
   color: #fff;
   margin-top: -3px;
   display: inline-block;
   margin-right: -15px;
 }
+
 .navbar .button-navbar {
   width: 20%;
   float: right;
   text-align: right;
 }
+
 .navbar .button-navbar li {
   display: inline-block;
   margin-left: 15px;
@@ -229,10 +244,12 @@ img {
   padding-top: 100px;
   background: linear-gradient(270deg, #2965a0 40%, #fff 0%);
 }
+
 .intro .content-text {
   position: relative;
   bottom: -90px;
 }
+
 .intro img {
   position: relative;
   bottom: -120px;
@@ -253,15 +270,19 @@ img {
   padding-top: 100px;
   padding-bottom: 70px;
 }
+
 .space .content {
   margin-bottom: 40px;
 }
+
 .space h2 {
   margin-bottom: 30px;
 }
+
 .space h5 {
   margin-top: 15px;
 }
+
 .space h3 {
   margin: 15px 0 20px;
 }
@@ -273,10 +294,14 @@ img {
   background: #2965a0;
   padding: 100px 0;
 }
-.testimonial .swiper-button-next, .testimonial .swiper-button-prev {
+
+.testimonial .swiper-button-next,
+.testimonial .swiper-button-prev {
   color: #f2c02f;
 }
-.testimonial .swiper-button-next::after, .testimonial .swiper-button-prev::after {
+
+.testimonial .swiper-button-next::after,
+.testimonial .swiper-button-prev::after {
   font-size: 30px;
 }
 
@@ -304,6 +329,7 @@ gallery
 .gallery {
   padding-top: 100px;
 }
+
 .gallery .row {
   margin-bottom: 30px;
 }
@@ -314,24 +340,30 @@ features
 .features {
   padding-top: 120px;
 }
+
 .features .content-right {
   padding-left: 100px;
 }
+
 .features .content {
   border: 2px solid #eaf2f1;
   padding: 35px 35px 20px;
   margin-bottom: 50px;
 }
+
 .features .content i {
   font-size: 80px;
   color: #2965a0;
 }
+
 .features .content h5 {
   margin-bottom: 30px;
 }
+
 .features .content1 {
   margin-top: 50px;
 }
+
 .features .content4 {
   margin-top: -50px;
 }
@@ -343,6 +375,7 @@ features
   padding-top: 60px;
   padding-bottom: 95px;
 }
+
 .contact i {
   height: 60px;
   width: 60px;
@@ -354,6 +387,7 @@ features
   margin-bottom: 20px;
   margin-top: 30px;
 }
+
 .contact .content-map iframe {
   width: 100%;
 }
@@ -367,13 +401,16 @@ footer {
   font-weight: 500;
   background: #eaf2f1;
 }
+
 footer ul li {
   display: inline-block;
   margin-right: 10px;
 }
+
 footer ul li a i {
   font-size: 20px;
 }
+
 footer .cp {
   text-align: right;
 }
@@ -411,10 +448,16 @@ footer .cp {
   .features .content4 {
     margin-top: -70px;
   }
+
+  .intro {
+    background: white;
+  }
+
 }
+
 @media (max-width: 767px) {
   .space .button {
-    margin-bottom: 40px;
+    margin-bottom: px;
   }
 
   .testimonial .swiper .content {
@@ -428,7 +471,10 @@ footer .cp {
   .features .content4 {
     margin-top: -50px;
   }
+
+
 }
+
 @media (max-width: 575px) {
   .container {
     padding: 0 25px;
@@ -451,8 +497,13 @@ footer .cp {
   footer {
     text-align: center;
   }
+
   footer .cp {
     text-align: center;
     margin-top: 15px;
+  }
+
+  .space-button {
+    margin-bottom: 40px;
   }
 }

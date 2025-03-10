@@ -227,7 +227,7 @@ img {
 ---------------------------------*/
 .intro {
   padding-top: 100px;
-  background: linear-gradient(270deg, #0fa797 40%, #fff 0%);
+  background: linear-gradient(270deg, #2965a0 40%, #fff 0%);
 }
 .intro .content-text {
   position: relative;
@@ -270,7 +270,7 @@ img {
   testimonial
 ---------------------------------*/
 .testimonial {
-  background: #0fa797;
+  background: #2965a0;
   padding: 100px 0;
 }
 .testimonial .swiper-button-next, .testimonial .swiper-button-prev {
@@ -324,7 +324,7 @@ features
 }
 .features .content i {
   font-size: 80px;
-  color: #0fa797;
+  color: #2965a0;
 }
 .features .content h5 {
   margin-bottom: 30px;
@@ -346,7 +346,7 @@ features
 .contact i {
   height: 60px;
   width: 60px;
-  background: #0fa797;
+  background: #2965a0;
   text-align: center;
   line-height: 60px;
   color: #fff;

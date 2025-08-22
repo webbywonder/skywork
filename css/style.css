@@ -331,7 +331,7 @@ img {
 gallery
 ---------------------------------*/
 .gallery {
-  padding-top: 100px;
+  padding-top: 30px;
 }
 
 .gallery .row {
@@ -552,6 +552,7 @@ footer .cp {
   padding: 80px 0;
   background: #f8f9fa;
   overflow: hidden;
+  margin-top: 60px;
 }
 
 .reviews h2 {

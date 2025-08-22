@@ -71,6 +71,77 @@
 
   });
 
+  // Load reviews from JSON file
+  $.getJSON('reviews.json', function (data) {
+    const reviews = data.reviews;
+
+    // Divide reviews into 3 rows
+    const row1 = reviews.slice(0, 4);
+    const row2 = reviews.slice(4, 8);
+    const row3 = reviews.slice(8);
+
+    // Generate review cards HTML
+    function createReviewCard(review) {
+      const stars = '⭐'.repeat(review.rating);
+      const cleanText = review.review_text.replace(/\n\n/g, ' ').replace(/\n/g, ' ');
+
+      return `
+        <div class="review-card">
+          <div class="review-header">
+            <div class="name-stars">
+              <h5>${review.reviewer_name}</h5>
+              <div class="stars">${stars}</div>
+            </div>
+            <div class="customer-type">${review.customer_type}</div>
+          </div>
+          <p>"${cleanText}"</p>
+        </div>
+      `;
+    }
+
+    // Populate each row with duplicated content for seamless scrolling
+    function populateRow(selector, reviews) {
+      const track = $(selector).find('.reviews-track');
+      let html = '';
+
+      // Add original reviews twice for perfect seamless loop
+      reviews.forEach(review => {
+        html += createReviewCard(review);
+      });
+      
+      reviews.forEach(review => {
+        html += createReviewCard(review);
+      });
+
+      track.html(html);
+    }
+
+    // Populate all rows
+    populateRow('.reviews-row[data-direction="left"]:first', row1);
+    populateRow('.reviews-row[data-direction="right"]', row2);
+    populateRow('.reviews-row[data-direction="left"]:last', row3);
+
+    // Initialize hover effects after content is loaded
+    initializeReviewsHover();
+  });
+
+  // Initialize animation controls
+  function initializeReviewsHover() {
+    // Add staggered animation delays
+    $('.reviews-row').each(function (index) {
+      $(this).find('.reviews-track').css('animation-delay', (index * 3) + 's');
+    });
+
+    // Pause animations when page is not visible
+    document.addEventListener('visibilitychange', function () {
+      if (document.hidden) {
+        $('.reviews-track').css('animation-play-state', 'paused');
+      } else {
+        $('.reviews-track').css('animation-play-state', 'running');
+      }
+    });
+  }
+
 })();
 
 // Email encryption to prevent spam

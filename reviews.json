@@ -1,0 +1,143 @@
+
+{
+  "business_name": "SkyWork Borivali",
+  "total_reviews": 13,
+  "average_rating": 5.0,
+  "reviews": [
+    {
+      "reviewer_name": "Roshan Vangule",
+      "rating": 5,
+      "review_date": "9 weeks ago",
+      "reviewer_stats": "6 reviews • 1 photo",
+      "review_text": "Ek din try kiya yaha trading ke liye. Ghar pe market hours me disturbance bohot hota hai, yaha peace mila.\n\nWiFi speed fast hai, trading apps lag nahi karte. Multiple screens setup kar sakta hu comfortably. AC me comfortable hai, market ki tension me sweat nahi aata! 😊\n\nDarshan bhai ne coffee bhi offer ki. Good vibes, other professionals bhi hain so serious environment milta hai.\n\nStation ke paas hai, morning 9 baje easily pahunch gaya. Market close hone tak comfortable raha. Will definitely come again during volatile market days.\n\nGood space for day traders jo ghar pe focus nahi kar paate! 📈",
+      "customer_type": "Day Trader"
+    },
+    {
+      "reviewer_name": "Parmar Harendra",
+      "rating": 5,
+      "review_date": "9 weeks ago",
+      "reviewer_stats": "1 review • 0 photos",
+      "review_text": "Great experience working from SkyWork coworking space. The environment is modern, clean, and thoughtfully designed — ideal for staying focused and productive. The high-speed internet and comfortable seating made working seamless, and the staff was friendly, professional, and always ready to help without being intrusive. I also appreciated the convenient location and the overall positive, energetic vibe. Highly recommended for anyone looking for a reliable and inspiring place to work.",
+      "customer_type": "Professional"
+    },
+    {
+      "reviewer_name": "G-48 Darshana Jilka",
+      "rating": 5,
+      "review_date": "9 weeks ago",
+      "reviewer_stats": "1 review • 0 photos",
+      "review_text": "Coding classes ke baad yaha aake practice karti hu. Ghar pe family disturbance bohot hai, yaha focus accha milta hai.\n\nChair comfortable hai, 4-5 hours coding karne me back pain nahi hota. WiFi consistent hai, Zoom calls clear aate hain mentorship ke liye.\n\nDarshan bhaiya helpful hai, kabhi technical issues me help bhi kar deta hai. Safe lagta hai, parents ko bhi tension nahi hai.",
+      "customer_type": "Student - Coding"
+    },
+    {
+      "reviewer_name": "Pakshal Gada",
+      "rating": 5,
+      "review_date": "9 weeks ago",
+      "reviewer_stats": "1 review • 0 photos",
+      "review_text": "Bhai yaha coding seekhne aata hu almost daily. WiFi ekdum fast hai, coding tutorials buffer nahi karte. AC bhi theek hai, laptop overheat nahi hota.\n\nStation ke bilkul paas hai so travelling easy. Owner bhi chill hai, disturb nahi karta. Pricing bhi student ke liye okay hai.\n\nGood place for students jo ghar pe focus nahi kar paate. Recommended for coding practice and online courses.",
+      "customer_type": "Student - Coding"
+    },
+    {
+      "reviewer_name": "Nikhil Vyas",
+      "rating": 5,
+      "review_date": "17 weeks ago",
+      "reviewer_stats": "Local Guide • 85 reviews • 5 photos",
+      "review_text": "First co-working office space with Air Purifier, Comfortable chairs and Spacious work desk. My colleague seats there since 4 months - Overall positive vibes.",
+      "customer_type": "Local Guide"
+    },
+    {
+      "reviewer_name": "CA Viren Pasad",
+      "rating": 5,
+      "review_date": "17 weeks ago",
+      "reviewer_stats": "1 review • 0 photos",
+      "review_text": "As a Chartered Accountant, I needed a professional venue to meet with an important client outside my office. I booked a few hours at SkyWork Borivali and was thoroughly impressed. The meeting space was quiet and private, which was essential for discussing confidential financial matters. The location right next to Borivali station made it convenient for both me and my client to reach. The internet connection was stable throughout our meeting, allowing me to access and present financial documents seamlessly. The staff was professional and unobtrusive. The pleasant environment with city views from the 15th floor added a touch of professionalism that impressed my client. Will definitely use this space again for client meetings that require privacy and a professional setting.",
+      "customer_type": "Chartered Accountant"
+    },
+    {
+      "reviewer_name": "Nushu Healthcare",
+      "rating": 5,
+      "review_date": "18 weeks ago",
+      "reviewer_stats": "1 review • 0 photos",
+      "review_text": "Our company needed a private space for a critical 5-day process handover between departing and incoming team leaders. We booked the 2-seater cabin at SkyWork Borivali and it was perfect for our needs. The reliable WiFi allowed us to access website without interruption. The location near Borivali station was convenient for both employees. The well-maintained environment and professional atmosphere helped us complete the handover efficiently. The staff was respectful of our privacy but available whenever needed. Excellent space for business transitions and training sessions - will definitely book again for similar requirements.",
+      "customer_type": "Healthcare Company"
+    },
+    {
+      "reviewer_name": "Vayu Naturals",
+      "rating": 5,
+      "review_date": "18 weeks ago",
+      "reviewer_stats": "1 review • 0 photos",
+      "review_text": "Finding SkyWork was a game changer for me. Working from home was becoming difficult with family distractions. Here, I get peace of mind, a professional setting, and excellent amenities. The location near the station means no need for cab or auto expenses. I will definitely continue my membership.",
+      "customer_type": "Business Professional"
+    },
+    {
+      "reviewer_name": "Aakash Jaiswal",
+      "rating": 5,
+      "review_date": "23 weeks ago",
+      "reviewer_stats": "4 reviews • 1 photo",
+      "review_text": "I am student preparing for exams and this place is perfect for serious study. Much better than library or cafe. Daily pass is affordable and environment is peaceful. Love the reliable internet with backup options for downloading study materials. Will recommend to friends.",
+      "customer_type": "Student - Exam Preparation"
+    },
+    {
+      "reviewer_name": "Valerian Pereira",
+      "rating": 5,
+      "review_date": "23 weeks ago",
+      "reviewer_stats": "10 reviews • 8 photos",
+      "review_text": "My startup team was working from different locations but now we booked private cabin and productivity has increased. Their backup WiFi system means our video meetings never get disconnected. Owner is very supportive and always asks if we need anything. Highly recommended for small teams.",
+      "customer_type": "Startup Team"
+    },
+    {
+      "reviewer_name": "swappy pawar",
+      "rating": 5,
+      "review_date": "24 weeks ago",
+      "reviewer_stats": "5 reviews • 9 photos",
+      "review_text": "Good workspace with all facilities. I took daily pass first to check and then shifted to monthly plan. The view from 15th floor is amazing and makes work less boring. Really appreciate the backup internet options for uninterrupted work. Small suggestion: please add coffee machine.",
+      "customer_type": "Regular Member"
+    },
+    {
+      "reviewer_name": "Paras Kothari",
+      "rating": 5,
+      "review_date": "24 weeks ago",
+      "reviewer_stats": "6 reviews • 0 photos",
+      "review_text": "First time using coworking space and SkyWork Borivali is simply superb! Location is too good, just come out from station and building is there only. WiFi speed is very fast and AC is always working properly. Will definitely come again.",
+      "customer_type": "First-time User"
+    },
+    {
+      "reviewer_name": "Bhavik Joshi",
+      "rating": 5,
+      "review_date": "24 weeks ago",
+      "reviewer_stats": "1 review • 0 photos",
+      "review_text": "Decent place for work. WiFi is fast. Location is main plus point as I can reach quickly after getting down at Borivali station. Price is reasonable compared to other options.",
+      "customer_type": "Professional"
+    }
+  ],
+  "key_highlights": [
+    "Excellent location near Borivali station",
+    "High-speed WiFi with backup connections",
+    "Professional and peaceful environment",
+    "Comfortable seating and air conditioning",
+    "15th floor city views",
+    "Helpful and supportive owner",
+    "Affordable pricing for students",
+    "Air purifier and modern amenities",
+    "Private cabin options available",
+    "Safe environment for all users"
+  ],
+  "customer_segments": [
+    "Day Traders",
+    "Students (Coding & Exam Prep)",
+    "Professionals",
+    "Startups",
+    "Healthcare Companies",
+    "Chartered Accountants",
+    "Business Teams"
+  ],
+  "common_praise_points": [
+    "Fast WiFi with backup",
+    "Convenient station location", 
+    "Professional atmosphere",
+    "Comfortable furniture",
+    "Helpful owner/staff",
+    "Peaceful environment",
+    "Good value for money",
+    "15th floor views"
+  ]
+}

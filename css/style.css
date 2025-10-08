@@ -42,11 +42,13 @@ h2 {
   font-weight: 700;
   line-height: 58px;
   margin-bottom: 20px;
+  color: #1e293b;
 }
 
 h3 {
   font-size: 28px;
   font-weight: 700;
+  color: #1e293b;
 }
 
 h4 {
@@ -332,7 +334,7 @@ img {
 ---------------------------------*/
 .space {
   padding: 80px 0 70px;
-  background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+  background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 50%, #fef3f2 100%);
 }
 
 .space h2 {
@@ -342,11 +344,13 @@ img {
 .space .content {
   margin-bottom: 40px;
   transition: all 0.3s ease;
+  border-radius: 15px;
+  overflow: hidden;
 }
 
 .space .content:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15) !important;
+  transform: translateY(-8px);
+  box-shadow: 0 12px 35px rgba(14, 165, 233, 0.2) !important;
 }
 
 .space h2 {
@@ -863,7 +867,7 @@ footer .cp {
 ---------------------------------*/
 .reviews {
   padding: 80px 0;
-  background: #f8f9fa;
+  background: linear-gradient(135deg, #f0f9ff 0%, #ffffff 50%, #fef3f2 100%);
   overflow: hidden;
   margin-top: 60px;
 }
@@ -903,12 +907,18 @@ footer .cp {
   width: 480px;
   min-height: 140px;
   background: white;
-  border-radius: 10px;
+  border-radius: 15px;
   padding: 18px;
-  box-shadow: 0 3px 12px rgba(0,0,0,0.06);
-  border: 1px solid #e9ecef;
+  box-shadow: 0 4px 20px rgba(14, 165, 233, 0.1);
+  border: 1px solid #e0f2fe;
   display: flex;
   flex-direction: column;
+  transition: all 0.3s ease;
+}
+
+.review-card:hover {
+  box-shadow: 0 8px 30px rgba(14, 165, 233, 0.15);
+  transform: translateY(-2px);
 }
 
 .review-header {
@@ -944,8 +954,8 @@ footer .cp {
 .customer-type {
   font-size: 10px;
   font-weight: 500;
-  color: #007bff;
-  background: #e3f2fd;
+  color: #0ea5e9;
+  background: #e0f2fe;
   padding: 3px 8px;
   border-radius: 4px;
   white-space: nowrap;
@@ -1038,10 +1048,15 @@ footer .cp {
 }
 
 .faq .accordion-item {
-  border: 1px solid #e9ecef;
-  border-radius: 10px !important;
+  border: 1px solid #e0f2fe;
+  border-radius: 12px !important;
   margin-bottom: 15px;
   overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.faq .accordion-item:hover {
+  box-shadow: 0 4px 15px rgba(14, 165, 233, 0.1);
 }
 
 .faq .accordion-button {

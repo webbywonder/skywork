@@ -2,16 +2,6 @@
 
   'use strict';
 
-  // preloader
-  $(window).on('load', function () {
-    $('.loader').fadeOut('slow');
-  });
-
-  // fallback: hide loader after 3 seconds if window load doesn't fire
-  setTimeout(function() {
-    $('.loader').fadeOut('slow');
-  }, 3000);
-
   // smooth scroll
   $("a").on("click", function (event) {
 

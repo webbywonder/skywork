@@ -82,6 +82,7 @@ Section order is unchanged: navbar, hero (with ticker), about, pricing, gallery,
 - **No smoking and no alcohol** anywhere in the workspace (new FAQ).
 - **Quiet workspace policy** (new): silent working space; virtual meetings at the desk are fine; phone calls happen in the passage near the lift.
 - New amenity facts: air conditioning, WiFi backup connections, electric kettle (mention alongside microwave in amenities and the pantry FAQ answer).
+- Fire safety (owner notice 2026-08-08): a 4 kg dry-chemical-powder fire extinguisher is installed in room 1503. On the site this surfaces as a brief mention in the health and safety FAQ answer and in the security amenity (renamed "Safety & Security"). The full internal notice, emergency numbers, and usage steps are not published.
 - New gallery assets: floor plan (`img/floor-plan.jpg`) and three setup-2 photos (`img/slides/SKYWORK-14.jpg` through `SKYWORK-16.jpg`).
 - **Two setups on the same floor**, same seating configuration each (confirmed): 26 seats total, 18 open desks, 8 cabin seats across two 4-seat cabins.
 - Address adds: "Near Borivali Railway Station", "PBC Building Gate No. 2".

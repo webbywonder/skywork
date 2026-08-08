@@ -76,6 +76,7 @@ section { padding: 90px 0; }
   letter-spacing: 0.3px;
   border-radius: 3px;
   border: 0;
+  white-space: nowrap;
   transition: background 0.25s ease;
 }
 .button:hover { background: #1c2c4e; color: var(--paper); }
@@ -334,6 +335,14 @@ footer img { height: 46px; width: auto; filter: brightness(0) invert(1); }
 /* ------------------------------
   Responsive
 ---------------------------------*/
+@media (min-width: 992px) and (max-width: 1199px) {
+  .navbar .navbar-brand img { height: 40px; }
+  .navbar .navbar-nav li { padding: 0 6px; }
+  .navbar .navbar-nav li a { font-size: 14px; }
+  .navbar .button-navbar { margin-left: 10px; }
+  .navbar .button-navbar .button { padding: 9px 16px; font-size: 12.5px; }
+}
+
 @media (max-width: 991px) {
   h1 { font-size: 54px; }
   h2 { font-size: 36px; }
@@ -358,6 +367,7 @@ footer img { height: 46px; width: auto; filter: brightness(0) invert(1); }
   .intro-photo { height: 300px; }
   .about-grid { grid-template-columns: 1fr; gap: 30px; }
   .price-grid { grid-template-columns: repeat(2, 1fr); }
+  .price-card.featured { grid-column: span 2; }
   .gallery-grid { grid-template-columns: repeat(2, 1fr); grid-auto-rows: 150px; }
   .amen-grid { grid-template-columns: 1fr; gap: 0; }
   .contact-grid { grid-template-columns: 1fr; gap: 30px; }
@@ -375,12 +385,19 @@ footer img { height: 46px; width: auto; filter: brightness(0) invert(1); }
   .intro .cta-row .button { width: 100%; text-align: center; }
   .intro-photo { height: 220px; }
 
+  h2 br { display: none; }
+
+  .ticker { padding: 16px 0; }
+  .ticker li { font-size: 11px; letter-spacing: 1.5px; }
+  .ticker li + li::before { margin: 0 8px; }
+
   .price-grid { grid-template-columns: 1fr; }
+  .price-card.featured { grid-column: auto; }
   .review-card { width: 340px; min-height: 120px; padding: 16px; }
   .review-header h5 { font-size: 13px; max-width: 150px; }
   .review-card p { font-size: 12px; }
 
-  .facts { gap: 24px; }
+  .facts { display: grid; grid-template-columns: repeat(2, 1fr); gap: 18px 12px; }
   .facts .f b { font-size: 28px; }
 
   footer .footer-row { justify-content: center; text-align: center; }

@@ -95,10 +95,21 @@
       track.html(html);
     }
 
-    // Populate all rows
-    populateRow('.reviews-row[data-direction="left"]:first', row1);
-    populateRow('.reviews-row[data-direction="right"]', row2);
-    populateRow('.reviews-row[data-direction="left"]:last', row3);
+    // On phones: one swipeable row with every review once, no marquee
+    if (window.matchMedia('(max-width: 767px)').matches) {
+      let html = '';
+      reviews.forEach(review => {
+        html += createReviewCard(review);
+      });
+      $('.reviews-row:first').find('.reviews-track').html(html);
+      $('.reviews-row').slice(1).hide();
+      $('#reviews').addClass('reviews-swipe');
+    } else {
+      // Populate all rows
+      populateRow('.reviews-row[data-direction="left"]:first', row1);
+      populateRow('.reviews-row[data-direction="right"]', row2);
+      populateRow('.reviews-row[data-direction="left"]:last', row3);
+    }
 
     // Initialize hover effects after content is loaded
     initializeReviewsHover();

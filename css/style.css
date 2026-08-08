@@ -238,6 +238,16 @@ section { padding: 90px 0; }
   100% { transform: translateX(0); }
 }
 
+/* Mobile reviews: one swipeable row instead of the marquee */
+@media (max-width: 767px) {
+  .reviews-swipe .reviews-row { overflow-x: auto; -webkit-overflow-scrolling: touch; scroll-snap-type: x mandatory; scrollbar-width: none; }
+  .reviews-swipe .reviews-row::-webkit-scrollbar { display: none; }
+  .reviews-swipe .reviews-track { animation: none !important; width: max-content; align-items: flex-start; padding: 2px 0; }
+  .reviews-swipe .review-card { scroll-snap-align: center; width: 78vw; max-width: 340px; }
+  .reviews-swipe .review-card p { display: -webkit-box; -webkit-line-clamp: 10; -webkit-box-orient: vertical; overflow: hidden; }
+  .reviews-swipe .section-sub::after { content: " Swipe for more."; color: var(--muted); font-weight: 600; }
+}
+
 /* ------------------------------
   Amenities (features)
 ---------------------------------*/

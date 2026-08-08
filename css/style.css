@@ -154,6 +154,8 @@ section { padding: 90px 0; }
 .price-card .name { font-size: 14px; font-weight: 600; letter-spacing: 1.5px; text-transform: uppercase; color: var(--muted); margin-bottom: 14px; }
 .price-card .amount { font-family: "Gloock", serif; font-size: 38px; color: var(--ink); }
 .price-card .amount small { font-family: "Schibsted Grotesk", sans-serif; font-size: 14px; color: var(--muted); }
+.price-card .amount-sub { font-size: 14px; font-weight: 600; color: var(--sky); margin-top: 3px; }
+.price-card .amount-sub small { font-weight: 400; color: var(--muted); }
 .price-card .note { font-size: 14.5px; color: var(--muted); margin: 10px 0 0; }
 .price-card.featured { background: var(--ink); border-color: var(--ink); position: relative; }
 .price-card.featured .amount { color: var(--paper); }

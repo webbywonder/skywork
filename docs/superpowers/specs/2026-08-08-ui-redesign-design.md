@@ -17,7 +17,7 @@ Full visual redesign of the SkyWork Borivali single-page site. Replace the curre
 | Typography | Gloock (headlines) + Schibsted Grotesk (everything else), via Google Fonts |
 | Background | Cool Porcelain scheme (chosen over white/mist/warm-paper via live switcher) |
 | Copy | Refresh voice (headlines, taglines, section intros); facts from owner's outreach message |
-| Logo | `img/logo-sideways.png` unchanged, displayed larger (58px navbar / 48px footer, white via CSS filter on dark) |
+| Logo | Same mark, now the vector `img/skywork-logo-horizontal.svg` (supplied 2026-08-08; replaces the PNG in markup — PNG stays on disk). Displayed larger: 58px navbar / 48px footer, white via CSS filter on dark |
 | Stack | No build step; Bootstrap 5 + jQuery + ES5 conventions per CLAUDE.md stay |
 
 ## Design system
@@ -63,7 +63,7 @@ Section order is unchanged: navbar → hero → (ticker) → about → pricing �
 3. **Amenity ticker** — slim hairline-bounded strip under hero photo: "Air Purified · Water Purified · Air Conditioned · Vegetarian-Only · High-Speed WiFi · 24/7 Security" in caps, muted.
 4. **About** — two-column editorial grid: left = overline + Gloock pull-quote ("Where you work matters. We built ours *fifteen floors up*." with accent em); right = lede paragraph + two support paragraphs + fact row (13 seats / 9 open desks / 4 cabin seats / 15th floor) over a hairline. Cabin described here as part of the space (not priced).
 5. **Pricing (`#space`)** — `--alt` background; overline + "Pay for the time you need. Nothing more."; 3×2 card grid; Monthly card inverted in ink with "Best value" sky tag; "Pricing last updated August 8, 2026" + call link below. No emojis, no per-card photos, no inline styles.
-6. **Gallery** — replace Bootstrap carousel with an editorial CSS grid (4 columns, 170px rows; one tall span-2, two wide span-2 tiles): 6 curated photos + a "+ 7 more" ink tile. Clicking any tile opens **Magnific Popup** gallery lightbox over all 13 images (library already loaded, currently unused). Carousel markup and indicators are deleted.
+6. **Gallery** — replace Bootstrap carousel with an editorial CSS grid (4 columns, 170px rows; one tall span-2, two wide span-2 tiles): the floor plan as the first (wide) tile + 6 curated photos + a "+ 7 more" ink tile. Clicking any tile opens **Magnific Popup** gallery lightbox over all 14 items (floor plan first, then the 13 photos; library already loaded, currently unused). Floor-plan asset: supplied by owner 2026-08-08, to be saved as `img/floor-plan.<ext>` (file pending — see open items). Carousel markup and indicators are deleted.
 7. **Reviews** — keep the 3-row auto-scroll marquee mechanic and `reviews.json` loading verbatim; restyle cards: white, hairline border, gold ★ stars (replace ⭐ emoji repeat with styled ★), name + customer-type in one quiet line.
 8. **Amenities (`#features`)** — `--alt` background; two-column hairline-divided list (icon ring + title + one-liner). Content updated: WiFi mentions backup connections; air/water purifier item mentions air-conditioned space.
 9. **FAQ** — restyled hairline accordion (Bootstrap accordion machinery kept): no colored left borders, serif +/– indicator via CSS. Questions: pantry (keep), outside food (keep, veg-only strict), parking (**answer: no parking available; train/transit recommended**), **new: "Is smoking allowed?" → strictly no-smoking workspace**, health & safety (keep). **Operating-hours question removed.**
@@ -118,6 +118,10 @@ Static site — verification is visual + functional, no unit-test framework exis
 ## Rollback
 
 Single revert of the implementation commit(s) restores the current design; no data or external state involved.
+
+## Open items
+
+- Floor-plan image file: shown by owner in session (two AC rooms, washroom, kitchen, storage, door labels, compass) but not yet on disk — owner to provide the exported image; save as `img/floor-plan.<ext>`. Implementation of the gallery's first tile depends on it.
 
 ## Out of scope
 

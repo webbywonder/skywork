@@ -40,18 +40,18 @@
 <body>
 
     <!-- navbar -->
-    <div id="navbar" class="navbar navbar-expand-lg justify-content-center align-items-center">
+    <header id="navbar" class="navbar navbar-expand-lg">
         <div class="container">
-            <a href="#" class="navbar-brand"><img src="img/logo-sideways.png" alt="SkyWork Borivali"></a>
+            <a href="#home" class="navbar-brand"><img src="img/skywork-logo-horizontal.svg" alt="SkyWork Borivali logo"></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <i class="la la-bars"></i>
             </button>
 
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav nav">
+                <ul class="navbar-nav nav ms-auto">
                     <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
                     <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#space">Hub Space</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#space">Pricing</a></li>
                     <li class="nav-item"><a class="nav-link" href="#gallery">Gallery</a></li>
                     <li class="nav-item"><a class="nav-link" href="#reviews">Reviews</a></li>
                     <li class="nav-item"><a class="nav-link" href="#faq">FAQ</a></li>
@@ -60,42 +60,40 @@
             </div>
 
             <ul class="button-navbar">
-                <li><a href="#" onclick="decryptPhone(); return false;" class="button"><i class="la la-phone"></i> Call Us Now</a></li>
+                <li><a href="#" onclick="decryptPhone(); return false;" class="button"><i class="la la-phone"></i> Call Us</a></li>
             </ul>
         </div>
-    </div>
+    </header>
     <!-- end navbar -->
 
+    <main>
+
     <!-- intro -->
-    <div id="home" class="intro">
+    <section id="home" class="intro">
         <div class="container">
-            <div class="content">
-                <div class="row align-items-center">
-                    <div class="col-lg-6 col-md-12">
-                        <div class="content-text">
-                            <div class="intro-badges">
-                                <span class="badge-item"><i class="la la-leaf"></i> Vegetarian-Only</span>
-                                <span class="badge-item"><i class="la la-wind"></i> Air Purified</span>
-                                <span class="badge-item"><i class="la la-tint"></i> Water Purified</span>
-                                <span class="badge-item"><i class="la la-utensils"></i> Microwave</span>
-                                <span class="badge-item"><i class="la la-video"></i> 24/7 Security</span>
-                                <span class="badge-item"><i class="la la-wifi"></i> High-Speed WiFi</span>
-                            </div>
-                            <h1>Elevate Your Workday at SkyWork Borivali</h1>
-                            <p>Premium health-conscious co-working space on the 15th floor near Borivali station. Stunning panoramic views and a productive environment for professionals, freelancers, and small teams.</p>
-                            <div class="intro-buttons">
-                                <a href="#space" class="button">View Pricing</a>
-                                <a href="#" onclick="decryptPhone(); return false;" class="button button-secondary">Book a Visit</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-6 col-md-12">
-                        <div class="intro-image">
-                            <img src="img/main.jpg" alt="SkyWork Borivali Coworking Space">
-                        </div>
-                    </div>
-                </div>
+            <span class="overline">15th Floor &middot; Steps from Borivali Station</span>
+            <h1>Work above<br>the city.</h1>
+            <p class="sub">A calm, health-first coworking space with panoramic views of Mumbai: purified air, purified water, and room to think.</p>
+            <div class="cta-row">
+                <a href="#" onclick="decryptPhone(); return false;" class="button">Book a Visit</a>
+                <a href="#space" class="button-ghost">See Pricing &rarr;</a>
             </div>
+            <div class="intro-photo">
+                <img src="img/main.jpg" alt="SkyWork Borivali coworking space on the 15th floor">
+            </div>
+        </div>
+    </section>
+
+    <div class="ticker" aria-label="Amenities">
+        <div class="container">
+            <ul>
+                <li>Air Purified</li>
+                <li>Water Purified</li>
+                <li>Air Conditioned</li>
+                <li>Vegetarian-Only</li>
+                <li>High-Speed WiFi</li>
+                <li>24/7 Security</li>
+            </ul>
         </div>
     </div>
     <!-- end intro -->

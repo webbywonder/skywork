@@ -2,7 +2,7 @@
 
 **Date:** 2026-08-08
 **Status:** Approved direction; pending final spec review
-**Reference mockup:** `.superpowers/brainstorm/12554-1786170354/content/homepage-mockup-v10.html` (approved by Darshan through 10 iterations)
+**Reference mockup:** `.superpowers/brainstorm/12554-1786170354/content/homepage-mockup-v14.html` (approved by Darshan through 14 iterations)
 
 ## Purpose
 
@@ -64,9 +64,9 @@ Section order is unchanged: navbar, hero (with ticker), about, pricing, gallery,
 3. **Amenity ticker:** slim hairline-bounded strip under hero photo: "Air Purified · Water Purified · Air Conditioned · Vegetarian-Only · High-Speed WiFi · 24/7 Security" in caps, muted.
 4. **About:** two-column editorial grid. Left: overline + Gloock pull-quote ("Where you work matters. We built ours *fifteen floors up*." with accent em). Right: lede paragraph + two support paragraphs + fact row over a hairline. Cabins described here as part of the space (not priced). Fact row: 2 setups · 26 total seats · 18 open desks · 8 cabin seats (the 15th-floor fact stays in the hero overline).
 5. **Pricing (`#space`):** `--alt` background; overline + "Pay for the time you need. Nothing more."; 3x2 card grid; Monthly card inverted in ink with "Best value" sky tag; "Pricing last updated August 8, 2026" + call link below. No emojis, no per-card photos, no inline styles.
-6. **Gallery:** replace Bootstrap carousel with an editorial CSS grid: 4 columns, 170px auto-rows, `grid-auto-flow: dense`. Tile spans must fill every cell of the 3-row grid with no holes (12 cells total: one tall span-2 tile + two wide span-2 tiles + singles + the "+ N more" ink tile; v12 mockup shows the working arrangement). With the floor plan as the first wide tile: floor plan + 7 photos + "+ 6 more" tile, lightbox over all 14 items (floor plan first, then the 13 photos) via **Magnific Popup** (already loaded, currently unused). Until the floor-plan file arrives (see open items), the layout ships with 8 photos + "+ 5 more". Floor-plan asset saved as `img/floor-plan.<ext>` when supplied. Carousel markup and indicators are deleted.
+6. **Gallery:** replace Bootstrap carousel with an editorial CSS grid: 4 columns, 170px auto-rows, `grid-auto-flow: dense`. Tile spans must fill every cell of the 3-row grid with no holes (12 cells: the floor plan as first wide tile with `object-fit: contain` on white + one tall tile + one wide tile + 5 singles + the "+ 9 more" ink tile; v14 mockup shows the working arrangement, including two setup-2 photos among the visible singles). Lightbox opens over all 17 items (floor plan first, then 16 photos) via **Magnific Popup** (already loaded, currently unused). Assets: `img/floor-plan.jpg` (from owner's WhatsApp image) and new setup-2 photos `img/slides/SKYWORK-14.jpg`, `SKYWORK-15.jpg`, `SKYWORK-16.jpg` joining SKYWORK-1 through 13. Carousel markup and indicators are deleted.
 7. **Reviews:** keep the 3-row auto-scroll marquee mechanic and `reviews.json` loading verbatim; restyle cards: white, hairline border, gold star glyphs (replace emoji-star repeat with styled ★), name + customer-type in one quiet line.
-8. **Amenities (`#features`):** `--alt` background; two-column hairline-divided list (icon ring + title + one-liner). Content updated: WiFi mentions backup connections; air/water purifier item mentions the air-conditioned space; new "Quiet by Design" item (silent working space, virtual meetings at your desk are fine, phone calls in the passage near the lift). Station Proximity item folds into copy elsewhere or stays as a seventh item if the grid needs balance; implementation picks the 6 best-balanced items.
+8. **Amenities (`#features`):** `--alt` background; two-column hairline-divided list (icon ring + title + one-liner). Content updated: WiFi mentions backup connections; air/water purifier item mentions the air-conditioned space; Kitchen Facilities mentions microwave and electric kettle for meals and hot drinks; new "Quiet by Design" item (silent working space, virtual meetings at your desk are fine, phone calls in the passage near the lift). Station Proximity item folds into copy elsewhere or stays as a seventh item if the grid needs balance; implementation picks the 6 best-balanced items.
 9. **FAQ:** restyled hairline accordion (Bootstrap accordion machinery kept): no colored left borders, serif plus/minus indicator via CSS. Questions: pantry (keep); outside food (keep, veg-only strict); **"Can I take phone calls in the workspace?"** (new: quiet space, virtual meetings fine at the desk, voice calls in the passage near the lift); **"Is smoking or drinking allowed?"** (new: strictly neither, no smoking and no alcohol); parking (**answer: no parking available; train/transit recommended**); health and safety (keep). **Operating-hours question removed.**
 10. **Referral:** the page's single dark band: ink background, Gloock "Bring a friend. Both save ₹500.", sub line, paper button. Benefit-item icon trio removed.
 11. **Contact:** two columns. Left: uppercase-label rows (Location with full new address; Reach us: call + WhatsApp links). **No hours row.** Right: Google Maps iframe (existing embed src), muted with slight grayscale filter, 12px radius.
@@ -81,7 +81,8 @@ Section order is unchanged: navbar, hero (with ticker), about, pricing, gallery,
 - **Vegetarian-Only (strict)** wording kept everywhere.
 - **No smoking and no alcohol** anywhere in the workspace (new FAQ).
 - **Quiet workspace policy** (new): silent working space; virtual meetings at the desk are fine; phone calls happen in the passage near the lift.
-- New amenity facts: air conditioning, WiFi backup connections.
+- New amenity facts: air conditioning, WiFi backup connections, electric kettle (mention alongside microwave in amenities and the pantry FAQ answer).
+- New gallery assets: floor plan (`img/floor-plan.jpg`) and three setup-2 photos (`img/slides/SKYWORK-14.jpg` through `SKYWORK-16.jpg`).
 - **Two setups on the same floor**, same seating configuration each (confirmed): 26 seats total, 18 open desks, 8 cabin seats across two 4-seat cabins.
 - Address adds: "Near Borivali Railway Station", "PBC Building Gate No. 2".
 - **All operating-hours mentions removed** (the current meta description has none; keep it that way in the refreshed copy).
@@ -125,7 +126,7 @@ Single revert of the implementation commit(s) restores the current design; no da
 
 ## Open items
 
-- Floor-plan image file: shown by owner in session (two AC rooms, washroom, kitchen, storage, door labels, compass) but not yet on disk. Owner to provide the exported image; save as `img/floor-plan.<ext>`. The gallery's first tile depends on it.
+None. All assets and facts are on disk and confirmed.
 
 ## Out of scope
 

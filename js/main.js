@@ -20,30 +20,13 @@
 
   });
 
-  // swiper slider
+  // gallery lightbox
   $(document).ready(function () {
-    var swiper = new Swiper(".mySwiper", {
-      slidesPerView: 1,
-      spaceBetween: 30,
-      pagination: {
-        el: ".swiper-pagination",
-        clickable: true,
-      },
-      navigation: {
-        nextEl: ".next-slide",
-        prevEl: ".prev-slide"
-      },
-      breakpoints: {
-        0: {
-          slidesPerView: 1,
-        },
-        768: {
-          slidesPerView: 1,
-        },
-        780: {
-          slidesPerView: 1,
-        }
-      }
+    $('.gallery-grid').magnificPopup({
+      delegate: 'a',
+      type: 'image',
+      gallery: { enabled: true },
+      image: { titleSrc: 'title' }
     });
   });
 

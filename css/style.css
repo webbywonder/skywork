@@ -169,6 +169,7 @@ section { padding: 90px 0; }
 /* ------------------------------
   Gallery
 ---------------------------------*/
+.gallery { background: var(--paper); }
 .gallery-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);

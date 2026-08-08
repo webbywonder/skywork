@@ -91,6 +91,20 @@ Section order is unchanged: navbar, hero (with ticker), about, pricing, gallery,
 - Voice refresh: new headlines and taglines per mockup; About condensed to lede + 2 paragraphs; no em dashes in any copy.
 - `<title>`/meta description: refresh to match new voice, keep SEO keywords (co-working Borivali, near station, health-conscious); no hours.
 
+## SEO, AEO, and GEO (added at owner sign-off, 2026-08-08)
+
+Goal: the redesigned page must be fully optimized for search engines (SEO), answer engines (AEO: featured snippets, AI assistants quoting the site), and generative engines (GEO: LLM-based search citing the site). Canonical domain: `https://www.skywork.in` (from CNAME).
+
+- **Semantic structure:** `<header>/<nav>/<main>/<section>/<footer>` landmarks; one `h1` (hero), `h2` per section; descriptive `alt` on every image; `lang="en"` kept.
+- **Head:** refreshed `<title>` and meta description in the new voice (keywords: coworking space Borivali, near Borivali station, health-conscious workspace; no hours); canonical link to `https://www.skywork.in/`; theme-color; Open Graph (og:title, og:description, og:image using a strong space photo, og:url, og:type business.business) and Twitter Card (summary_large_image).
+- **JSON-LD structured data** (single script block):
+  - `LocalBusiness` (name SkyWork Borivali, description, url, telephone +91 9029208698, full `PostalAddress`, `hasMap` link `https://maps.app.goo.gl/p5FEZYJgniyvwe6m9`, image, priceRange "₹350-₹6,000", amenity highlights via `amenityFeature`). No `openingHours` property: the owner removed all operating-hours mentions site-wide, and structured data counts as a mention.
+  - `FAQPage` with all six FAQ question/answer pairs verbatim (primary AEO surface).
+  - No self-serving `aggregateRating`/`Review` markup: Google ignores review markup a business publishes about itself, and the reviews are sourced from Google Maps; the visible review cards carry that content instead.
+- **Crawl files:** `robots.txt` (allow all, point to sitemap) and `sitemap.xml` (single URL, lastmod 2026-08-08).
+- **AEO/GEO content practices:** FAQ answers stay self-contained and quotable (each answers its question in the first sentence); About states the concrete facts (2 setups, 26 seats, 15th floor, station proximity) in plain prose that engines can lift; pricing plans are marked up as clear name/price text, not images.
+- **Performance hygiene:** `loading="lazy"` on below-fold images; `preconnect` to fonts.googleapis.com and fonts.gstatic.com; fonts load with `display=swap`.
+
 ## Code architecture
 
 | File | Change |
@@ -99,6 +113,7 @@ Section order is unchanged: navbar, hero (with ticker), about, pricing, gallery,
 | `index.html` | Section markup restructured per above; all inline styles removed; carousel becomes gallery grid; unused `js/jquery.filterizr.min.js` and `js/swiper.min.js` + `css/swiper.min.css` references removed. |
 | `js/main.js` | Remove dead Swiper init (no `.mySwiper` in DOM). Add Magnific Popup gallery init. Keep: smooth scroll, navbar collapse/scroll behaviors, reviews JSON loading (selectors preserved), `decryptPhone()`/`decryptEmail()`. ES5 + jQuery style per CLAUDE.md. |
 | `reviews.json` | Refreshed with the 20 current Google reviews (schema unchanged; already committed). |
+| `robots.txt`, `sitemap.xml` | New files at repo root per the SEO section. |
 | Deleted files | None (unused libs stay on disk, just unreferenced, which keeps rollback trivial). |
 
 Error handling: reviews `$.getJSON` gains a `.fail()` that hides the reviews section gracefully (currently silent empty rows). Image `alt` attributes preserved/updated.
@@ -119,7 +134,8 @@ Static site, so verification is visual + functional; no unit-test framework exis
 2. Functional checks: anchor nav + smooth scroll to every section; mobile hamburger opens/closes; gallery lightbox opens all 14 items; reviews rows populate and scroll; `decryptPhone` links fire `tel:`; WhatsApp button URL intact; FAQ accordions toggle.
 3. Content checks: grep the built page for `hour`, old prices (`₹250`, `₹400`, `₹2,250`, `₹4,000`, `₹5,000`, `₹6,000/month/seat`), `parking`, emoji, and em dashes to confirm no stale facts or banned punctuation survive.
 4. Console: zero JS errors on load.
-5. Lighthouse pass (performance + accessibility): no regressions vs current site; images keep `loading="lazy"` where present.
+5. Lighthouse pass (performance + accessibility + SEO): no regressions vs current site; images keep `loading="lazy"` where present.
+6. Structured data: validate the JSON-LD parses (python json check on the extracted block) and matches on-page facts exactly (prices, address, FAQ text); confirm robots.txt and sitemap.xml resolve when served.
 
 ## Rollback
 

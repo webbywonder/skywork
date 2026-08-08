@@ -53,14 +53,15 @@
   $.getJSON('reviews.json', function (data) {
     const reviews = data.reviews;
 
-    // Divide reviews into 3 rows
-    const row1 = reviews.slice(0, 4);
-    const row2 = reviews.slice(4, 8);
-    const row3 = reviews.slice(8);
+    // Divide reviews into 3 balanced rows
+    const third = Math.ceil(reviews.length / 3);
+    const row1 = reviews.slice(0, third);
+    const row2 = reviews.slice(third, third * 2);
+    const row3 = reviews.slice(third * 2);
 
     // Generate review cards HTML
     function createReviewCard(review) {
-      const stars = '⭐'.repeat(review.rating);
+      const stars = '★'.repeat(review.rating);
       const cleanText = review.review_text.replace(/\n\n/g, ' ').replace(/\n/g, ' ');
 
       return `
@@ -101,6 +102,8 @@
 
     // Initialize hover effects after content is loaded
     initializeReviewsHover();
+  }).fail(function () {
+    $('#reviews').hide();
   });
 
   // Initialize animation controls

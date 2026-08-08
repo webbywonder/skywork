@@ -102,6 +102,7 @@ Goal: the redesigned page must be fully optimized for search engines (SEO), answ
   - `FAQPage` with all six FAQ question/answer pairs verbatim (primary AEO surface).
   - No self-serving `aggregateRating`/`Review` markup: Google ignores review markup a business publishes about itself, and the reviews are sourced from Google Maps; the visible review cards carry that content instead.
 - **Crawl files:** `robots.txt` (allow all, point to sitemap) and `sitemap.xml` (single URL, lastmod 2026-08-08).
+- **LLM files (added at PR stage):** `llms.txt` (concise markdown summary with key facts and links) and `llms-full.txt` (complete factual reference: space, pricing, amenities, policies, FAQ, contact). Both mirror on-page facts exactly and contain no operating hours.
 - **AEO/GEO content practices:** FAQ answers stay self-contained and quotable (each answers its question in the first sentence); About states the concrete facts (2 setups, 26 seats, 15th floor, station proximity) in plain prose that engines can lift; pricing plans are marked up as clear name/price text, not images.
 - **Performance hygiene:** `loading="lazy"` on below-fold images; `preconnect` to fonts.googleapis.com and fonts.gstatic.com; fonts load with `display=swap`.
 

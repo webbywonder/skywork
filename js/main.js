@@ -20,30 +20,13 @@
 
   });
 
-  // swiper slider
+  // gallery lightbox
   $(document).ready(function () {
-    var swiper = new Swiper(".mySwiper", {
-      slidesPerView: 1,
-      spaceBetween: 30,
-      pagination: {
-        el: ".swiper-pagination",
-        clickable: true,
-      },
-      navigation: {
-        nextEl: ".next-slide",
-        prevEl: ".prev-slide"
-      },
-      breakpoints: {
-        0: {
-          slidesPerView: 1,
-        },
-        768: {
-          slidesPerView: 1,
-        },
-        780: {
-          slidesPerView: 1,
-        }
-      }
+    $('.gallery-grid').magnificPopup({
+      delegate: 'a',
+      type: 'image',
+      gallery: { enabled: true },
+      image: { titleSrc: 'title' }
     });
   });
 
@@ -70,14 +53,15 @@
   $.getJSON('reviews.json', function (data) {
     const reviews = data.reviews;
 
-    // Divide reviews into 3 rows
-    const row1 = reviews.slice(0, 4);
-    const row2 = reviews.slice(4, 8);
-    const row3 = reviews.slice(8);
+    // Divide reviews into 3 balanced rows
+    const third = Math.ceil(reviews.length / 3);
+    const row1 = reviews.slice(0, third);
+    const row2 = reviews.slice(third, third * 2);
+    const row3 = reviews.slice(third * 2);
 
     // Generate review cards HTML
     function createReviewCard(review) {
-      const stars = '⭐'.repeat(review.rating);
+      const stars = '★'.repeat(review.rating);
       const cleanText = review.review_text.replace(/\n\n/g, ' ').replace(/\n/g, ' ');
 
       return `
@@ -111,13 +95,26 @@
       track.html(html);
     }
 
-    // Populate all rows
-    populateRow('.reviews-row[data-direction="left"]:first', row1);
-    populateRow('.reviews-row[data-direction="right"]', row2);
-    populateRow('.reviews-row[data-direction="left"]:last', row3);
+    // On phones: one swipeable row with every review once, no marquee
+    if (window.matchMedia('(max-width: 767px)').matches) {
+      let html = '';
+      reviews.forEach(review => {
+        html += createReviewCard(review);
+      });
+      $('.reviews-row:first').find('.reviews-track').html(html);
+      $('.reviews-row').slice(1).hide();
+      $('#reviews').addClass('reviews-swipe');
+    } else {
+      // Populate all rows
+      populateRow('.reviews-row[data-direction="left"]:first', row1);
+      populateRow('.reviews-row[data-direction="right"]', row2);
+      populateRow('.reviews-row[data-direction="left"]:last', row3);
+    }
 
     // Initialize hover effects after content is loaded
     initializeReviewsHover();
+  }).fail(function () {
+    $('#reviews').hide();
   });
 
   // Initialize animation controls

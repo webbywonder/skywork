@@ -12,10 +12,9 @@ SkyWork Borivali is a static website for a premium co-working space in Mumbai. T
 - **Libraries**:
   - jQuery 3.x (DOM manipulation, AJAX)
   - Bootstrap 5 (layout, components, responsive grid)
-  - Swiper.js (carousel for gallery)
-  - Magnific Popup (image lightbox)
-  - Filterizr (portfolio filtering, currently unused)
+  - Magnific Popup (gallery lightbox)
   - Line Awesome (icon font)
+  - Google Fonts: Gloock + Schibsted Grotesk
 - **No build tools**: Direct file serving, no transpilation or bundling
 
 ## Development Workflow
@@ -62,17 +61,16 @@ Reviews are loaded from `reviews.json` via AJAX (`js/main.js:75-126`) and displa
 ## Common Development Tasks
 
 ### Updating Pricing
-Edit the pricing cards in `index.html` around lines 100-156. Update the timestamp on line 105 when prices change.
+Edit the pricing cards in the `.price-grid` section of `index.html`. Update the timestamp in the `.updated` line when prices change.
 
 ### Adding/Removing Reviews
-Edit `reviews.json`. The reviews array is automatically split into three rows (0-3, 4-7, 8+) by `js/main.js:79-81`. Each review requires: `reviewer_name`, `rating`, `review_date`, `reviewer_stats`, `review_text`, `customer_type`.
+Edit `reviews.json`. The reviews array is automatically split into three rows (three balanced thirds via Math.ceil(reviews.length / 3)) by `js/main.js:79-81`. Each review requires: `reviewer_name`, `rating`, `review_date`, `reviewer_stats`, `review_text`, `customer_type`.
 
 ### Modifying Gallery Images
-Update the Bootstrap carousel in `index.html:173-199`. Each slide needs a `carousel-item` div with an `<img>` tag. Update carousel indicators count to match number of slides.
+Update the `.gallery-grid` anchors in index.html. Visible tiles are `.g` anchors; extra lightbox-only images use `.g-hidden`. Keep the grid filling all 12 cells and update the '+ N more' count.
 
 ### Changing Contact Information
-- Address: `index.html:303`
-- Hours: `index.html:310-311`
+- Address: the "Location" `.c-item` inside `.contact-grid` in `index.html`
 - Phone: Update the decoded number in `js/main.js:172` (NOT the encoded version on line 166)
 - Google Maps: Replace iframe src on `index.html:292`
 

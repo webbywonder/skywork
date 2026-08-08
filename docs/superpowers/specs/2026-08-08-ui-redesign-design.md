@@ -62,7 +62,7 @@ Section order is unchanged: navbar, hero (with ticker), about, pricing, gallery,
 1. **Navbar:** porcelain background, hairline bottom border; SVG logo at 58px; links right-aligned; "Call Us" as ink button (keeps `decryptPhone()`). Mobile: existing Bootstrap collapse behavior, restyled.
 2. **Hero:** overline "15th Floor · Steps from Borivali Station"; h1 "Work above the city."; one-sentence sub; CTA pair (Book a Visit triggers phone; See Pricing ghost-links to #space); full-width photo (`img/main.jpg`, 16px radius, ~440px, object-fit cover). The six badge pills are removed.
 3. **Amenity ticker:** slim hairline-bounded strip under hero photo: "Air Purified · Water Purified · Air Conditioned · Vegetarian-Only · High-Speed WiFi · 24/7 Security" in caps, muted.
-4. **About:** two-column editorial grid. Left: overline + Gloock pull-quote ("Where you work matters. We built ours *fifteen floors up*." with accent em). Right: lede paragraph + two support paragraphs + fact row over a hairline. Cabin described here as part of the space (not priced). Fact row values pending the two-setups confirmation (see open items).
+4. **About:** two-column editorial grid. Left: overline + Gloock pull-quote ("Where you work matters. We built ours *fifteen floors up*." with accent em). Right: lede paragraph + two support paragraphs + fact row over a hairline. Cabins described here as part of the space (not priced). Fact row: 2 setups · 26 total seats · 18 open desks · 8 cabin seats (the 15th-floor fact stays in the hero overline).
 5. **Pricing (`#space`):** `--alt` background; overline + "Pay for the time you need. Nothing more."; 3x2 card grid; Monthly card inverted in ink with "Best value" sky tag; "Pricing last updated August 8, 2026" + call link below. No emojis, no per-card photos, no inline styles.
 6. **Gallery:** replace Bootstrap carousel with an editorial CSS grid (4 columns, 170px rows; one tall span-2 and two wide span-2 tiles): the floor plan as the first (wide) tile + 6 curated photos + a "+ 7 more" ink tile. Clicking any tile opens **Magnific Popup** gallery lightbox over all 14 items (floor plan first, then the 13 photos; library already loaded, currently unused). Floor-plan asset: supplied by owner 2026-08-08, to be saved as `img/floor-plan.<ext>` (file pending, see open items). Carousel markup and indicators are deleted.
 7. **Reviews:** keep the 3-row auto-scroll marquee mechanic and `reviews.json` loading verbatim; restyle cards: white, hairline border, gold star glyphs (replace emoji-star repeat with styled ★), name + customer-type in one quiet line.
@@ -82,7 +82,7 @@ Section order is unchanged: navbar, hero (with ticker), about, pricing, gallery,
 - **No smoking and no alcohol** anywhere in the workspace (new FAQ).
 - **Quiet workspace policy** (new): silent working space; virtual meetings at the desk are fine; phone calls happen in the passage near the lift.
 - New amenity facts: air conditioning, WiFi backup connections.
-- **Two setups on the same floor** with the same seating configuration (owner note; exact combined seat counts pending, see open items).
+- **Two setups on the same floor**, same seating configuration each (confirmed): 26 seats total, 18 open desks, 8 cabin seats across two 4-seat cabins.
 - Address adds: "Near Borivali Railway Station", "PBC Building Gate No. 2".
 - **All operating-hours mentions removed** (the current meta description has none; keep it that way in the refreshed copy).
 - Copyright: **© 2024-2026** (plain hyphen).
@@ -126,7 +126,6 @@ Single revert of the implementation commit(s) restores the current design; no da
 ## Open items
 
 - Floor-plan image file: shown by owner in session (two AC rooms, washroom, kitchen, storage, door labels, compass) but not yet on disk. Owner to provide the exported image; save as `img/floor-plan.<ext>`. The gallery's first tile depends on it.
-- Two setups, same floor, same seating configuration (owner note 2026-08-08): confirm combined seat counts before finalizing About copy and the fact row (13 seats per setup and 26 total, or another split).
 
 ## Out of scope
 
